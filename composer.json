@@ -1,0 +1,50 @@
+{
+    "name": "mappy/mappy",
+    "description": "Real Time Maps",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "mappy"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tech Studio",
+            "homepage": "technicalstudio.co.uk"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "~3.0.0-beta.23"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "mappy\\mappy\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Mappy",
+        "handle": "mappy",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": true,
+        "hasCpSection": true,
+        "changelogUrl": "???",
+        "components": {
+            "mappyService": "mappy\\mappy\\services\\MappyService"
+        },
+        "class": "mappy\\mappy\\Mappy"
+    }
+}

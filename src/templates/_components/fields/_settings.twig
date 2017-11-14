@@ -1,0 +1,25 @@
+{#
+/**
+ * Mappy plugin for Craft CMS
+ *
+ *  Field Settings
+ *
+ * @author    Tech Studio
+ * @copyright Copyright (c) 2017 Tech Studio
+ * @link      technicalstudio.co.uk
+ * @package   Mappy
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("mappy\\mappy\\assetbundles\\mappy\\MappyAsset") %}
+
+{{ forms.textField({
+    label: 'Some Attribute',
+    instructions: 'Enter some attribute here.',
+    id: 'someAttribute',
+    name: 'someAttribute',
+    value: field['someAttribute']})
+}}

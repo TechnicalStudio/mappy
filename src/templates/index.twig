@@ -1,0 +1,45 @@
+{#
+/**
+ * Mappy plugin for Craft CMS 3.x
+ *
+ * Mappy index.twig
+ *
+ * @author    Tech Studio
+ * @copyright Copyright (c) 2017 Tech Studio
+ * @link      technicalstudio.co.uk
+ * @package   Mappy
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("mappy\\mappy\\assetbundles\\mappy\\MappyAsset") %}
+{% do view.registerAssetBundle("mappy\\mappy\\assetbundles\\indexcpsection\\IndexCPSectionAsset") %}
+
+{# Link for the ? icon at the bottom of the page #}
+{% set docsUrl = "???" %}
+
+{# The title of this CP section #}
+{% set title = "Mappy" %}
+
+{# The URL to this plugin's base CP section #}
+{% set pluginCpUrl = url('mappy') %}
+
+{# Get a URL to an image in our AssetBundle #}
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@mappy/mappy/assetbundles/indexcpsection/dist', true) ~ '/img/Index-icon.svg' %}
+
+{# Content that should appear in the page header#}
+{% set extraPageHeaderHtml %}
+    <div class="buttons">
+        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('mappy') }}</a>
+    </div>
+{% endset %}
+
+{# The content of the CP Section#}
+{% set content %}
+    <h2>{{ "Index CP Section body goes here"|t('mappy') }}</h2>
+    <img src="{{ iconUrl }}" height="64" width="64" />
+    <p class="textline"></p>
+{% endset %}
