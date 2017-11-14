@@ -11,14 +11,14 @@
         "mappy"
     ],
     "support": {
-        "docs": "???",
-        "issues": "???"
+        "docs": "https://github.com/TechnicalStudio/mappy",
+        "issues": "https://github.com/TechnicalStudio/mappy"
     },
     "license": "MIT",
     "authors": [
         {
             "name": "Tech Studio",
-            "homepage": "technicalstudio.co.uk"
+            "homepage": "https://technicalstudio.co.uk"
         }
     ],
     "require": {
@@ -41,7 +41,6 @@
         "schemaVersion": "1.0.0",
         "hasCpSettings": true,
         "hasCpSection": true,
-        "changelogUrl": "???",
         "components": {
             "mappyService": "mappy\\mappy\\services\\MappyService"
         },
